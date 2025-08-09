@@ -34,7 +34,7 @@ A detailed walkthrough of MySQL—from installation to advanced SQL features—b
 
 ## Overview
 
-MySQL is a relational **Database Management System (DBMS)** that manages data, facilitating operations like creation, retrieval, updating, and deletion. Knowledge of one DBMS makes transitioning to others easier ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+MySQL is a relational **Database Management System (DBMS)** that manages data, facilitating operations like creation, retrieval, updating, and deletion. Knowledge of one DBMS makes transitioning to others easier.
 
 ---
 
@@ -46,7 +46,7 @@ Steps:
 1. Download from the official MySQL site.  
 2. Run the installer; choose **Developer Default**.  
 3. Set a **root password** when prompted.  
-4. (Optional) Install **MySQL Workbench**—a powerful graphical tool for modeling, executing SQL, and administrative tasks ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+4. (Optional) Install **MySQL Workbench**—a powerful graphical tool for modeling, executing SQL, and administrative tasks.
 
 ### Linux (Ubuntu)
 
@@ -65,8 +65,7 @@ FLUSH PRIVILEGES;
 EXIT;
 mysql -u harry -p  # then enter the password
 ```
-> Replace `'yourpassword'` with a strong, secure password in production ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+> Replace `'yourpassword'` with a strong, secure password in production.
 ---
 
 ## Getting Started with MySQL
@@ -74,8 +73,7 @@ mysql -u harry -p  # then enter the password
 ### What is a Database?
 
 - **Analogy:** Database = Folder, Table = File, Row = File Content  
-- **Excel Analogy:** Database = Workbook, Table = Sheet, Row = Spreadsheet Row ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+- **Excel Analogy:** Database = Workbook, Table = Sheet, Row = Spreadsheet Row.
 ### Create a Database
 ```sql
 CREATE DATABASE startersql;
@@ -98,12 +96,12 @@ CREATE TABLE users (
 ```sql
 DROP DATABASE startersql;
 ```
-> Use with caution as this deletes all data ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+> Use with caution as this deletes all data.
 
 ### Data Types & Constraints
 
 - **Data Types:** `INT`, `VARCHAR`, `ENUM`, `DATE`, `TIMESTAMP`, `BOOLEAN`, `DECIMAL(x,y)` (exact numeric)  
-- **Constraints:** `AUTO_INCREMENT`, `PRIMARY KEY`, `NOT NULL`, `UNIQUE`, `DEFAULT` values ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+- **Constraints:** `AUTO_INCREMENT`, `PRIMARY KEY`, `NOT NULL`, `UNIQUE`, `DEFAULT` values.
 
 ---
 
@@ -227,8 +225,7 @@ Optimize query performance:
 CREATE INDEX idx_gender_salary ON users(gender, salary);
 DROP INDEX idx_email ON users;
 ```  
-Usage must match column order in the index ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+Usage must match column order in the index.
 ### Subqueries
 
 ```sql
