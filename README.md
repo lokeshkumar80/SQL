@@ -139,8 +139,7 @@ RENAME TABLE customers TO users;
   ```sql
   ALTER TABLE users MODIFY COLUMN email VARCHAR(100) FIRST;
   ALTER TABLE users MODIFY COLUMN gender ENUM('Male','Female','Other') AFTER name;
-  ``` ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+  ```
 ---
 
 ## Inserting Data
@@ -163,8 +162,7 @@ RENAME TABLE customers TO users;
     ('Charlie', 'charlie@example.com', 'Other', '1988‑02‑17'),
     ('David', 'david@example.com', 'Male', '2000‑08‑09'),
     ('Eva', 'eva@example.com', 'Female', '1993‑12‑30');
-  ``` ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+  ```
 ---
 
 ## Advanced SQL Concepts
@@ -192,7 +190,7 @@ CREATE TABLE addresses (
 - Drop foreign key:
   ```sql
   ALTER TABLE addresses DROP FOREIGN KEY fk_user;
-  ``` ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+  ```
 
 ### Joins
 
@@ -207,8 +205,7 @@ CREATE TABLE addresses (
   SELECT a.id, a.name AS user_name, b.name AS referred_by
   FROM users a
   LEFT JOIN users b ON a.referred_by_id = b.id;
-  ``` ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+  ```
 ### Views
 
 Virtual tables:
@@ -216,8 +213,7 @@ Virtual tables:
 CREATE VIEW high_salary_users AS
 SELECT id, name, salary FROM users WHERE salary > 70000;
 SELECT * FROM high_salary_users;
-``` ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+```
 ### Indexes
 
 Optimize query performance:
@@ -236,13 +232,12 @@ WHERE salary > (SELECT AVG(salary) FROM users);
 SELECT id, name, referred_by_id
 FROM users
 WHERE referred_by_id IN (SELECT id FROM users WHERE salary > 75000);
-``` ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+```
 
 ### Stored Procedures & Triggers
 
 - **Stored Procedures:** Use `DELIMITER`, `CREATE PROCEDURE`, `CALL`, `DROP PROCEDURE` patterns.
-- **Triggers:** Automatically run on events (`INSERT`, `UPDATE`, `DELETE`) with `BEFORE` or `AFTER` options. Useful for logging or enforcing business logic. ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+- **Triggers:** Automatically run on events (`INSERT`, `UPDATE`, `DELETE`) with `BEFORE` or `AFTER` options. Useful for logging or enforcing business logic.
 ---
 
 ## Reference
