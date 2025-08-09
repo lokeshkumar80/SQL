@@ -59,13 +59,13 @@ sudo mysql_secure_installation
 **Create a user:**
 ```sql
 sudo mysql
-CREATE USER 'harry'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON *.* TO 'harry'@'localhost' WITH GRANT OPTION;
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'yourpassword';
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 EXIT;
 mysql -u harry -p  # then enter the password
 ```
-> Replace `'password'` with a strong, secure password in production ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+> Replace `'yourpassword'` with a strong, secure password in production ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
 
 ---
 
