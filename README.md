@@ -34,7 +34,7 @@ A detailed walkthrough of MySQL—from installation to advanced SQL features—b
 
 ## Overview
 
-MySQL is a relational **Database Management System (DBMS)** that manages data, facilitating operations like creation, retrieval, updating, and deletion. Knowledge of one DBMS makes transitioning to others easier ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+MySQL is a relational **Database Management System (DBMS)** that manages data, facilitating operations like creation, retrieval, updating, and deletion. Knowledge of one DBMS makes transitioning to others easier.
 
 ---
 
@@ -46,7 +46,7 @@ Steps:
 1. Download from the official MySQL site.  
 2. Run the installer; choose **Developer Default**.  
 3. Set a **root password** when prompted.  
-4. (Optional) Install **MySQL Workbench**—a powerful graphical tool for modeling, executing SQL, and administrative tasks ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+4. (Optional) Install **MySQL Workbench**—a powerful graphical tool for modeling, executing SQL, and administrative tasks.
 
 ### Linux (Ubuntu)
 
@@ -59,14 +59,13 @@ sudo mysql_secure_installation
 **Create a user:**
 ```sql
 sudo mysql
-CREATE USER 'harry'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON *.* TO 'harry'@'localhost' WITH GRANT OPTION;
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'yourpassword';
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 EXIT;
 mysql -u harry -p  # then enter the password
 ```
-> Replace `'password'` with a strong, secure password in production ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+> Replace `'yourpassword'` with a strong, secure password in production.
 ---
 
 ## Getting Started with MySQL
@@ -74,8 +73,7 @@ mysql -u harry -p  # then enter the password
 ### What is a Database?
 
 - **Analogy:** Database = Folder, Table = File, Row = File Content  
-- **Excel Analogy:** Database = Workbook, Table = Sheet, Row = Spreadsheet Row ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+- **Excel Analogy:** Database = Workbook, Table = Sheet, Row = Spreadsheet Row.
 ### Create a Database
 ```sql
 CREATE DATABASE startersql;
@@ -98,12 +96,12 @@ CREATE TABLE users (
 ```sql
 DROP DATABASE startersql;
 ```
-> Use with caution as this deletes all data ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+> Use with caution as this deletes all data.
 
 ### Data Types & Constraints
 
 - **Data Types:** `INT`, `VARCHAR`, `ENUM`, `DATE`, `TIMESTAMP`, `BOOLEAN`, `DECIMAL(x,y)` (exact numeric)  
-- **Constraints:** `AUTO_INCREMENT`, `PRIMARY KEY`, `NOT NULL`, `UNIQUE`, `DEFAULT` values ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+- **Constraints:** `AUTO_INCREMENT`, `PRIMARY KEY`, `NOT NULL`, `UNIQUE`, `DEFAULT` values.
 
 ---
 
@@ -141,8 +139,7 @@ RENAME TABLE customers TO users;
   ```sql
   ALTER TABLE users MODIFY COLUMN email VARCHAR(100) FIRST;
   ALTER TABLE users MODIFY COLUMN gender ENUM('Male','Female','Other') AFTER name;
-  ``` ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+  ```
 ---
 
 ## Inserting Data
@@ -165,8 +162,7 @@ RENAME TABLE customers TO users;
     ('Charlie', 'charlie@example.com', 'Other', '1988‑02‑17'),
     ('David', 'david@example.com', 'Male', '2000‑08‑09'),
     ('Eva', 'eva@example.com', 'Female', '1993‑12‑30');
-  ``` ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+  ```
 ---
 
 ## Advanced SQL Concepts
@@ -194,7 +190,7 @@ CREATE TABLE addresses (
 - Drop foreign key:
   ```sql
   ALTER TABLE addresses DROP FOREIGN KEY fk_user;
-  ``` ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+  ```
 
 ### Joins
 
@@ -209,8 +205,7 @@ CREATE TABLE addresses (
   SELECT a.id, a.name AS user_name, b.name AS referred_by
   FROM users a
   LEFT JOIN users b ON a.referred_by_id = b.id;
-  ``` ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+  ```
 ### Views
 
 Virtual tables:
@@ -218,8 +213,7 @@ Virtual tables:
 CREATE VIEW high_salary_users AS
 SELECT id, name, salary FROM users WHERE salary > 70000;
 SELECT * FROM high_salary_users;
-``` ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+```
 ### Indexes
 
 Optimize query performance:
@@ -227,8 +221,7 @@ Optimize query performance:
 CREATE INDEX idx_gender_salary ON users(gender, salary);
 DROP INDEX idx_email ON users;
 ```  
-Usage must match column order in the index ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+Usage must match column order in the index.
 ### Subqueries
 
 ```sql
@@ -239,13 +232,12 @@ WHERE salary > (SELECT AVG(salary) FROM users);
 SELECT id, name, referred_by_id
 FROM users
 WHERE referred_by_id IN (SELECT id FROM users WHERE salary > 75000);
-``` ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
+```
 
 ### Stored Procedures & Triggers
 
 - **Stored Procedures:** Use `DELIMITER`, `CREATE PROCEDURE`, `CALL`, `DROP PROCEDURE` patterns.
-- **Triggers:** Automatically run on events (`INSERT`, `UPDATE`, `DELETE`) with `BEFORE` or `AFTER` options. Useful for logging or enforcing business logic. ([codewithharry.com](https://www.codewithharry.com/blogpost/the-ultimate-sql-course?utm_source=chatgpt.com)).
-
+- **Triggers:** Automatically run on events (`INSERT`, `UPDATE`, `DELETE`) with `BEFORE` or `AFTER` options. Useful for logging or enforcing business logic.
 ---
 
 ## Reference
