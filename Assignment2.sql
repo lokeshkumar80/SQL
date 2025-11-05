@@ -200,6 +200,105 @@ INSERT INTO Students VALUES (1095,'Student95', '2003-08-04','I',2016,'student95@
 
 INSERT INTO Students VALUES (1096,'Student96', '1999-08-04','I',1999,'student96@university.com', '+919866544302',104,215);   /*Student with admission year before 2000*/
 
+ALTER TABLE Students
+ADD COLUMN Address VARCHAR(150);
+
+UPDATE Students SET Address = 'Lucknow, Uttar Pradesh' WHERE StudentID = 1001;
+UPDATE Students SET Address = 'Varanasi, Uttar Pradesh' WHERE StudentID = 1002;
+UPDATE Students SET Address = 'Patna, Bihar' WHERE StudentID = 1003;
+UPDATE Students SET Address = 'Gorakhpur, Uttar Pradesh' WHERE StudentID = 1004;
+UPDATE Students SET Address = 'Muzaffarpur, Bihar' WHERE StudentID = 1005;
+UPDATE Students SET Address = 'Prayagraj, Uttar Pradesh' WHERE StudentID = 1006;
+UPDATE Students SET Address = 'Gaya, Bihar' WHERE StudentID = 1007;
+UPDATE Students SET Address = 'Kanpur, Uttar Pradesh' WHERE StudentID = 1008;
+UPDATE Students SET Address = 'Bhagalpur, Bihar' WHERE StudentID = 1009;
+UPDATE Students SET Address = 'Noida, Uttar Pradesh' WHERE StudentID = 1010;
+UPDATE Students SET Address = 'Darbhanga, Bihar' WHERE StudentID = 1011;
+UPDATE Students SET Address = 'Agra, Uttar Pradesh' WHERE StudentID = 1012;
+UPDATE Students SET Address = 'Sasaram, Bihar' WHERE StudentID = 1013;
+UPDATE Students SET Address = 'Meerut, Uttar Pradesh' WHERE StudentID = 1014;
+UPDATE Students SET Address = 'Siwan, Bihar' WHERE StudentID = 1015;
+UPDATE Students SET Address = 'Jhansi, Uttar Pradesh' WHERE StudentID = 1016;
+UPDATE Students SET Address = 'Chapra, Bihar' WHERE StudentID = 1017;
+UPDATE Students SET Address = 'Bareilly, Uttar Pradesh' WHERE StudentID = 1018;
+UPDATE Students SET Address = 'Hajipur, Bihar' WHERE StudentID = 1019;
+UPDATE Students SET Address = 'Moradabad, Uttar Pradesh' WHERE StudentID = 1020;
+UPDATE Students SET Address = 'Arrah, Bihar' WHERE StudentID = 1021;
+UPDATE Students SET Address = 'Aligarh, Uttar Pradesh' WHERE StudentID = 1022;
+UPDATE Students SET Address = 'Katihar, Bihar' WHERE StudentID = 1023;
+UPDATE Students SET Address = 'Faizabad, Uttar Pradesh' WHERE StudentID = 1024;
+UPDATE Students SET Address = 'Begusarai, Bihar' WHERE StudentID = 1025;
+UPDATE Students SET Address = 'Saharanpur, Uttar Pradesh' WHERE StudentID = 1026;
+UPDATE Students SET Address = 'Sitamarhi, Bihar' WHERE StudentID = 1027;
+UPDATE Students SET Address = 'Etawah, Uttar Pradesh' WHERE StudentID = 1028;
+UPDATE Students SET Address = 'Purnia, Bihar' WHERE StudentID = 1029;
+UPDATE Students SET Address = 'Ballia, Uttar Pradesh' WHERE StudentID = 1030;
+UPDATE Students SET Address = 'Motihari, Bihar' WHERE StudentID = 1031;
+UPDATE Students SET Address = 'Rampur, Uttar Pradesh' WHERE StudentID = 1032;
+UPDATE Students SET Address = 'Madhubani, Bihar' WHERE StudentID = 1033;
+UPDATE Students SET Address = 'Firozabad, Uttar Pradesh' WHERE StudentID = 1034;
+UPDATE Students SET Address = 'Nalanda, Bihar' WHERE StudentID = 1035;
+UPDATE Students SET Address = 'Sultanpur, Uttar Pradesh' WHERE StudentID = 1036;
+UPDATE Students SET Address = 'Samastipur, Bihar' WHERE StudentID = 1037;
+UPDATE Students SET Address = 'Basti, Uttar Pradesh' WHERE StudentID = 1038;
+UPDATE Students SET Address = 'Sitamarhi, Bihar' WHERE StudentID = 1039;
+UPDATE Students SET Address = 'Banda, Uttar Pradesh' WHERE StudentID = 1040;
+UPDATE Students SET Address = 'Aurangabad, Bihar' WHERE StudentID = 1041;
+UPDATE Students SET Address = 'Deoria, Uttar Pradesh' WHERE StudentID = 1042;
+UPDATE Students SET Address = 'Khagaria, Bihar' WHERE StudentID = 1043;
+UPDATE Students SET Address = 'Ayodhya, Uttar Pradesh' WHERE StudentID = 1044;
+UPDATE Students SET Address = 'Sheohar, Bihar' WHERE StudentID = 1045;
+UPDATE Students SET Address = 'Azamgarh, Uttar Pradesh' WHERE StudentID = 1046;
+UPDATE Students SET Address = 'Rohtas, Bihar' WHERE StudentID = 1047;
+UPDATE Students SET Address = 'Mathura, Uttar Pradesh' WHERE StudentID = 1048;
+UPDATE Students SET Address = 'Buxar, Bihar' WHERE StudentID = 1049;
+UPDATE Students SET Address = 'Lucknow, Uttar Pradesh' WHERE StudentID = 1050;
+UPDATE Students SET Address = 'Muzaffarpur, Bihar' WHERE StudentID = 1051;
+UPDATE Students SET Address = 'Kanpur, Uttar Pradesh' WHERE StudentID = 1052;
+UPDATE Students SET Address = 'Patna, Bihar' WHERE StudentID = 1053;
+UPDATE Students SET Address = 'Gorakhpur, Uttar Pradesh' WHERE StudentID = 1054;
+UPDATE Students SET Address = 'Gaya, Bihar' WHERE StudentID = 1055;
+UPDATE Students SET Address = 'Varanasi, Uttar Pradesh' WHERE StudentID = 1056;
+UPDATE Students SET Address = 'Darbhanga, Bihar' WHERE StudentID = 1057;
+UPDATE Students SET Address = 'Agra, Uttar Pradesh' WHERE StudentID = 1058;
+UPDATE Students SET Address = 'Sasaram, Bihar' WHERE StudentID = 1059;
+UPDATE Students SET Address = 'Meerut, Uttar Pradesh' WHERE StudentID = 1060;
+UPDATE Students SET Address = 'Chapra, Bihar' WHERE StudentID = 1061;
+UPDATE Students SET Address = 'Jhansi, Uttar Pradesh' WHERE StudentID = 1062;
+UPDATE Students SET Address = 'Siwan, Bihar' WHERE StudentID = 1063;
+UPDATE Students SET Address = 'Noida, Uttar Pradesh' WHERE StudentID = 1064;
+UPDATE Students SET Address = 'Hajipur, Bihar' WHERE StudentID = 1065;
+UPDATE Students SET Address = 'Bareilly, Uttar Pradesh' WHERE StudentID = 1066;
+UPDATE Students SET Address = 'Arrah, Bihar' WHERE StudentID = 1067;
+UPDATE Students SET Address = 'Aligarh, Uttar Pradesh' WHERE StudentID = 1068;
+UPDATE Students SET Address = 'Katihar, Bihar' WHERE StudentID = 1069;
+UPDATE Students SET Address = 'Faizabad, Uttar Pradesh' WHERE StudentID = 1070;
+UPDATE Students SET Address = 'Begusarai, Bihar' WHERE StudentID = 1071;
+UPDATE Students SET Address = 'Saharanpur, Uttar Pradesh' WHERE StudentID = 1072;
+UPDATE Students SET Address = 'Sitamarhi, Bihar' WHERE StudentID = 1073;
+UPDATE Students SET Address = 'Etawah, Uttar Pradesh' WHERE StudentID = 1074;
+UPDATE Students SET Address = 'Purnia, Bihar' WHERE StudentID = 1075;
+UPDATE Students SET Address = 'Ballia, Uttar Pradesh' WHERE StudentID = 1076;
+UPDATE Students SET Address = 'Motihari, Bihar' WHERE StudentID = 1077;
+UPDATE Students SET Address = 'Rampur, Uttar Pradesh' WHERE StudentID = 1078;
+UPDATE Students SET Address = 'Madhubani, Bihar' WHERE StudentID = 1079;
+UPDATE Students SET Address = 'Firozabad, Uttar Pradesh' WHERE StudentID = 1080;
+UPDATE Students SET Address = 'Nalanda, Bihar' WHERE StudentID = 1081;
+UPDATE Students SET Address = 'Sultanpur, Uttar Pradesh' WHERE StudentID = 1082;
+UPDATE Students SET Address = 'Samastipur, Bihar' WHERE StudentID = 1083;
+UPDATE Students SET Address = 'Basti, Uttar Pradesh' WHERE StudentID = 1084;
+UPDATE Students SET Address = 'Sitamarhi, Bihar' WHERE StudentID = 1085;
+UPDATE Students SET Address = 'Banda, Uttar Pradesh' WHERE StudentID = 1086;
+UPDATE Students SET Address = 'Aurangabad, Bihar' WHERE StudentID = 1087;
+UPDATE Students SET Address = 'Deoria, Uttar Pradesh' WHERE StudentID = 1088;
+UPDATE Students SET Address = 'Khagaria, Bihar' WHERE StudentID = 1089;
+UPDATE Students SET Address = 'Ayodhya, Uttar Pradesh' WHERE StudentID = 1090;
+UPDATE Students SET Address = 'Sheohar, Bihar' WHERE StudentID = 1091;
+UPDATE Students SET Address = 'Azamgarh, Uttar Pradesh' WHERE StudentID = 1092;
+UPDATE Students SET Address = 'Rohtas, Bihar' WHERE StudentID = 1093;
+
+
+
 -- /*Output of some select queries*/
 
 SELECT Name,AdmissionYear From Students where Gender = 'M';
